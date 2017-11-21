@@ -1,0 +1,15 @@
+﻿<meta>
+  <info name="CEFResource" author="Livamyrd" />
+
+  <!--Client Files-->
+  <script src="Javascript/Eventhandler.js" type="client" lang="javascript" />
+  <script src="Javascript/CEF.js" type="client" lang="javascript" />
+ 
+  <!--Server Files-->
+  <script src="CEFCommands.cs" type="server" lang="csharp" />
+  <script src="Connect.cs" type="server" lang="csharp" />
+
+  <!--CEF Resources-->
+  <file src="Designs/blackbox.html" />
+  <file src="Designs/main.css" />
+</meta>

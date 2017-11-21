@@ -259,3 +259,24 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/System.Net.Http.dll
+/System.Linq.dll
+/System.IO.dll
+/protobuf-net.dll
+/Owin.dll
+/NLog.xml
+/NLog.dll
+/NLog.config
+/Newtonsoft.Json.dll
+/Nancy.Owin.dll
+/Nancy.dll
+/Mono.Posix.dll
+/Microsoft.Owin.Hosting.dll
+/Microsoft.Owin.Host.HttpListener.dll
+/Microsoft.Owin.dll
+/Lidgren.Network.dll
+/GrandTheftMultiplayer.Shared.dll
+/GrandTheftMultiplayer.Server.exe
+/EULA.txt
+/BCrypt.Net.dll
+/assemblyinfo.txt
