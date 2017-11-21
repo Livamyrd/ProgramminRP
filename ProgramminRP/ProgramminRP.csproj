@@ -1,0 +1,448 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6083BDB0-FBA3-49FF-9E27-2E28405962DB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProgramminRP</RootNamespace>
+    <AssemblyName>ProgramminRP</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BCrypt.Net, Version=0.1.5073.29922, Culture=neutral, PublicKeyToken=6bcd409ee6bc9292, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt-Official.0.1.109\lib\BCrypt.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrandTheftMultiplayer.Server, Version=0.1.640.64, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\grandtheftmultiplayer.api.0.1.640.64\lib\net452\GrandTheftMultiplayer.Server.exe</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrandTheftMultiplayer.Shared, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\grandtheftmultiplayer.api.0.1.640.64\lib\net452\GrandTheftMultiplayer.Shared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.4.12\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="resources\admin\admin.cs" />
+    <Compile Include="resources\anticheat\serverside_ac.cs" />
+    <Compile Include="resources\assault\main.cs" />
+    <Compile Include="resources\assault\round.cs" />
+    <Compile Include="resources\cashgrab\heist.cs" />
+    <Compile Include="resources\CEFResource\CEFCommands.cs" />
+    <Compile Include="resources\CEFResource\Connect.cs" />
+    <Compile Include="resources\CEFResource\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="resources\CEFResource\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="resources\CEFResource\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="resources\CEFResource\Properties\AssemblyInfo.cs" />
+    <Compile Include="resources\colorednames\ColoredNames.cs" />
+    <Compile Include="resources\copcam\copcam_trigger.cs" />
+    <Compile Include="resources\copsncrooks\copsncrooks.cs" />
+    <Compile Include="resources\deathmatch\deathmatch.cs" />
+    <Compile Include="resources\destructionderby\dd.cs" />
+    <Compile Include="resources\doormanager\doormanager.cs" />
+    <Compile Include="resources\fallout\fallout.cs" />
+    <Compile Include="resources\freeroam\freeroam.cs" />
+    <Compile Include="resources\glue\glue.cs" />
+    <Compile Include="resources\gtaocharacter\gtao_api.cs" />
+    <Compile Include="resources\heligrab\heligrab.cs" />
+    <Compile Include="resources\helpmanager\helpmanager.cs" />
+    <Compile Include="resources\hunter\hunter.cs" />
+    <Compile Include="resources\killchat\killchat.cs" />
+    <Compile Include="resources\mapcycler\mapcycler.cs" />
+    <Compile Include="resources\maploader\maploader.cs" />
+    <Compile Include="resources\mines\mines.cs" />
+    <Compile Include="resources\pennedin\movement.cs" />
+    <Compile Include="resources\pennedin\pennedin.cs" />
+    <Compile Include="resources\playerblips-pro\Playerblips.cs" />
+    <Compile Include="resources\playerblips\playerblips.cs" />
+    <Compile Include="resources\playerlist-pro\Playerlist.cs" />
+    <Compile Include="resources\race\race.cs" />
+    <Compile Include="resources\rpg\AutoCrimeReporter.cs" />
+    <Compile Include="resources\rpg\Citizen\CitizenCommands.cs" />
+    <Compile Include="resources\rpg\ConnectionManager.cs" />
+    <Compile Include="resources\rpg\Cops\CopCommands.cs" />
+    <Compile Include="resources\rpg\Cops\CopUtil.cs" />
+    <Compile Include="resources\rpg\Cops\JailController.cs" />
+    <Compile Include="resources\rpg\Cops\PoliceStation.cs" />
+    <Compile Include="resources\rpg\Cops\WantedLevelDataProvider.cs" />
+    <Compile Include="resources\rpg\Database.cs" />
+    <Compile Include="resources\rpg\Debug.cs" />
+    <Compile Include="resources\rpg\DimensionManager.cs" />
+    <Compile Include="resources\rpg\Global\GlobalCommands.cs" />
+    <Compile Include="resources\rpg\Global\RespawnManager.cs" />
+    <Compile Include="resources\rpg\Global\Util.cs" />
+    <Compile Include="resources\rpg\LoginManager.cs" />
+    <Compile Include="resources\rpg\SpawnManager.cs" />
+    <Compile Include="resources\rpg\Vehicles\VehicleSpawner.cs" />
+    <Compile Include="resources\scoreboard\scoreboard.cs" />
+    <Compile Include="resources\spawner\Server\Main.cs" />
+    <Compile Include="resources\tron\main.cs" />
+    <Compile Include="resources\votemanager\main.cs" />
+    <Compile Include="resources\votemanager\votetypes.cs" />
+    <Compile Include="resources\welcomemessages\welcomemessages.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="resources\assault-ranch\test.map" />
+    <None Include="resources\cefchat\Roboto-Regular.ttf" />
+    <None Include="resources\cefchat\Roboto-Thin.ttf" />
+    <None Include="resources\CEFResource\obj\Debug\CEFResource.csproj.CoreCompileInputs.cache" />
+    <None Include="resources\CEFResource\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="resources\CEFResource\obj\Release\CEFResource.csproj.CoreCompileInputs.cache" />
+    <None Include="resources\CEFResource\packages.config" />
+    <None Include="resources\dm-doom\doom.map" />
+    <None Include="resources\dm-graveyard\graveyard.map" />
+    <None Include="resources\dm-hotel\hotel.map" />
+    <None Include="resources\dm-yacht\yacht.map" />
+    <None Include="resources\license.md" />
+    <None Include="resources\packages\BCrypt-Official.0.1.109\BCrypt-Official.0.1.109.nupkg" />
+    <None Include="resources\packages\grandtheftmultiplayer.api.0.1.640.64\grandtheftmultiplayer.api.0.1.640.64.nupkg" />
+    <None Include="resources\packages\grandtheftmultiplayer.typescript.0.1.17\grandtheftmultiplayer.typescript.0.1.17.nupkg" />
+    <None Include="resources\packages\NLog.4.4.12\NLog.4.4.12.nupkg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LICENSE.txt" />
+    <Content Include="resources\admin\acl.xml" />
+    <Content Include="resources\admin\meta.xml" />
+    <Content Include="resources\anticheat\clientside_ac.js" />
+    <Content Include="resources\anticheat\meta.xml" />
+    <Content Include="resources\assault-ranch\meta.xml" />
+    <Content Include="resources\assault\meta.xml" />
+    <Content Include="resources\assault\server_subtitle.js" />
+    <Content Include="resources\cashgrab\heist_local.js" />
+    <Content Include="resources\cashgrab\meta.xml" />
+    <Content Include="resources\cefchat\chat.html" />
+    <Content Include="resources\cefchat\chat.js" />
+    <Content Include="resources\cefchat\chatcontroller.js" />
+    <Content Include="resources\cefchat\jquery.js" />
+    <Content Include="resources\cefchat\meta.xml" />
+    <Content Include="resources\CEFResource\CEFResource.csproj" />
+    <Content Include="resources\CEFResource\Designs\blackbox.html" />
+    <Content Include="resources\CEFResource\Designs\main.css" />
+    <Content Include="resources\CEFResource\Javascript\CEF.js" />
+    <Content Include="resources\CEFResource\Javascript\EventHandler.js" />
+    <Content Include="resources\CEFResource\Javascript\Login.js" />
+    <Content Include="resources\CEFResource\LICENSE.txt" />
+    <Content Include="resources\CEFResource\meta.xml" />
+    <Content Include="resources\ceftest\cef.js" />
+    <Content Include="resources\ceftest\meta.xml" />
+    <Content Include="resources\cinema\controller.js" />
+    <Content Include="resources\cinema\meta.xml" />
+    <Content Include="resources\colorednames\meta.xml" />
+    <Content Include="resources\copcam\copcam_controller.js" />
+    <Content Include="resources\copcam\meta.xml" />
+    <Content Include="resources\copsncrooks\blipcontroller.js" />
+    <Content Include="resources\copsncrooks\meta.xml" />
+    <Content Include="resources\deathmatch\meta.xml" />
+    <Content Include="resources\destructionderby\dd_local.js" />
+    <Content Include="resources\destructionderby\meta.xml" />
+    <Content Include="resources\dm-doom\doom.js" />
+    <Content Include="resources\dm-doom\e1m1.mp3" />
+    <Content Include="resources\dm-doom\meta.xml" />
+    <Content Include="resources\dm-graveyard\meta.xml" />
+    <Content Include="resources\dm-hotel\meta.xml" />
+    <Content Include="resources\dm-yacht\meta.xml" />
+    <Content Include="resources\doormanager\doormanager.js" />
+    <Content Include="resources\doormanager\meta.xml" />
+    <Content Include="resources\fallout\fallout.js" />
+    <Content Include="resources\fallout\meta.xml" />
+    <Content Include="resources\freeroam\freeroam_local.js" />
+    <Content Include="resources\freeroam\meta.xml" />
+    <Content Include="resources\freeroam\trainer\player.js" />
+    <Content Include="resources\freeroam\trainer\trainer.js" />
+    <Content Include="resources\freeroam\trainer\vehicles.js" />
+    <Content Include="resources\freeroam\trainer\weapons.js" />
+    <Content Include="resources\glue\meta.xml" />
+    <Content Include="resources\gtaocharacter\gtao_handler.js" />
+    <Content Include="resources\gtaocharacter\meta.xml" />
+    <Content Include="resources\headshots\main.js" />
+    <Content Include="resources\headshots\meta.xml" />
+    <Content Include="resources\heligrab\heligrab.js" />
+    <Content Include="resources\heligrab\meta.xml" />
+    <Content Include="resources\helpmanager\bootstrap.css" />
+    <Content Include="resources\helpmanager\bootstrap.js" />
+    <Content Include="resources\helpmanager\helpmanager.js" />
+    <Content Include="resources\helpmanager\jquery.js" />
+    <Content Include="resources\helpmanager\main.html" />
+    <Content Include="resources\helpmanager\meta.xml" />
+    <Content Include="resources\hunter\hunter.js" />
+    <Content Include="resources\hunter\meta.xml" />
+    <Content Include="resources\killchat\killchat_local.js" />
+    <Content Include="resources\killchat\meta.xml" />
+    <Content Include="resources\mapcycler\meta.xml" />
+    <Content Include="resources\maploader\meta.xml" />
+    <Content Include="resources\mines\meta.xml" />
+    <Content Include="resources\netstats\main.html" />
+    <Content Include="resources\netstats\meta.xml" />
+    <Content Include="resources\netstats\netstat_controller.js" />
+    <Content Include="resources\netstats\smoothie.js" />
+    <Content Include="resources\packages\BCrypt-Official.0.1.109\content\LICENSE.txt" />
+    <Content Include="resources\packages\BCrypt-Official.0.1.109\lib\BCrypt.Net.dll" />
+    <Content Include="resources\packages\BCrypt-Official.0.1.109\lib\BCrypt.Net.pdb" />
+    <Content Include="resources\packages\BCrypt-Official.0.1.109\lib\BCrypt.Net.XML" />
+    <Content Include="resources\packages\grandtheftmultiplayer.api.0.1.640.64\lib\net452\GrandTheftMultiplayer.Server.exe" />
+    <Content Include="resources\packages\grandtheftmultiplayer.api.0.1.640.64\lib\net452\GrandTheftMultiplayer.Shared.dll" />
+    <Content Include="resources\packages\NLog.4.4.12\lib\MonoAndroid10\NLog.dll" />
+    <Content Include="resources\packages\NLog.4.4.12\lib\MonoAndroid10\NLog.xml" />
+    <Content Include="resources\packages\NLog.4.4.12\lib\net35\NLog.dll" />
+    <Content Include="resources\packages\NLog.4.4.12\lib\net35\NLog.xml" />
+    <Content Include="resources\packages\NLog.4.4.12\lib\net40\NLog.dll" />
+    <Content Include="resources\packages\NLog.4.4.12\lib\net40\NLog.xml" />
+    <Content Include="resources\packages\NLog.4.4.12\lib\net45\NLog.dll" />
+    <Content Include="resources\packages\NLog.4.4.12\lib\net45\NLog.xml" />
+    <Content Include="resources\packages\NLog.4.4.12\lib\sl4\NLog.dll" />
+    <Content Include="resources\packages\NLog.4.4.12\lib\sl4\NLog.xml" />
+    <Content Include="resources\packages\NLog.4.4.12\lib\sl5\NLog.dll" />
+    <Content Include="resources\packages\NLog.4.4.12\lib\sl5\NLog.xml" />
+    <Content Include="resources\packages\NLog.4.4.12\lib\wp8\NLog.dll" />
+    <Content Include="resources\packages\NLog.4.4.12\lib\wp8\NLog.xml" />
+    <Content Include="resources\packages\NLog.4.4.12\lib\Xamarin.iOS10\NLog.dll" />
+    <Content Include="resources\packages\NLog.4.4.12\lib\Xamarin.iOS10\NLog.xml" />
+    <Content Include="resources\pennedin\marker_controller.js" />
+    <Content Include="resources\pennedin\meta.xml" />
+    <Content Include="resources\playerblips-pro\meta.xml" />
+    <Content Include="resources\playerblips-pro\playerblips.js" />
+    <Content Include="resources\playerblips\meta.xml" />
+    <Content Include="resources\playerblips\playerblips.js" />
+    <Content Include="resources\playerlist-pro\meta.xml" />
+    <Content Include="resources\playerlist-pro\playerlist.js" />
+    <Content Include="resources\race\meta.xml" />
+    <Content Include="resources\race\race_local.js" />
+    <Content Include="resources\rpg\MenuManager.js" />
+    <Content Include="resources\rpg\meta.xml" />
+    <Content Include="resources\rpg\MoneyDisplay.js" />
+    <Content Include="resources\rpg\ServersideCamera.js" />
+    <Content Include="resources\rpg\SkinSelector.js" />
+    <Content Include="resources\rpg\vehicles.xml" />
+    <Content Include="resources\scoreboard\meta.xml" />
+    <Content Include="resources\scoreboard\scoreboard_local.js" />
+    <Content Include="resources\spawner\Client\main.js" />
+    <Content Include="resources\spawner\Client\vehicles.js" />
+    <Content Include="resources\spawner\meta.xml" />
+    <Content Include="resources\speedometer\d3.v2.js" />
+    <Content Include="resources\speedometer\gauge.js" />
+    <Content Include="resources\speedometer\main.html" />
+    <Content Include="resources\speedometer\meta.xml" />
+    <Content Include="resources\speedometer\speedometer.js" />
+    <Content Include="resources\tron\meta.xml" />
+    <Content Include="resources\votemanager\gui.js" />
+    <Content Include="resources\votemanager\meta.xml" />
+    <Content Include="resources\welcomemessages\meta.xml" />
+    <Content Include="resources\winforms\forms.js" />
+    <Content Include="resources\winforms\index.html" />
+    <Content Include="resources\winforms\main.html" />
+    <Content Include="resources\winforms\main.js" />
+    <Content Include="resources\winforms\meta.xml" />
+    <Content Include="resources\winforms\resource\ceftest\test.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\arrows-combined.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\arrows\down-invert.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\arrows\down-small.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\arrows\down.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\arrows\forward.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\arrows\left.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\arrows\rewind.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\arrows\right-invert.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\arrows\right.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\arrows\up-invert.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\arrows\up-small.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\arrows\up.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\colorselector-combined.gif" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\colorselector\brightness-field.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\colorselector\brightness-handle.gif" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\colorselector\huesaturation-field.jpg" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\colorselector\huesaturation-handle.gif" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\cursors-combined.gif" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\cursors\alias.gif" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\cursors\copy.gif" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\cursors\move.gif" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\cursors\nodrop.gif" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\form\checked.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\form\tooltip-error-arrow-right.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\form\tooltip-error-arrow.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\form\undetermined.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\menu-checkradio-combined.gif" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\menu\checkbox-invert.gif" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\menu\checkbox.gif" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\menu\radiobutton-invert.gif" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\menu\radiobutton.gif" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\scrollbar-combined.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\scrollbar\scrollbar-down.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\scrollbar\scrollbar-left.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\scrollbar\scrollbar-right.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\scrollbar\scrollbar-up.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\splitpane-knobs-combined.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\splitpane\knob-horizontal.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\splitpane\knob-vertical.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\table-combined.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\table\ascending.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\table\boolean-false.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\table\boolean-true.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\table\descending.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\table\select-column-order.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\toolbar\toolbar-handle-knob.gif" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\toolbar\toolbar-part.gif" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\tree-combined.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\tree\closed-selected.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\tree\closed.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\tree\open-selected.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\tree\open.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\window-captionbar-buttons-combined.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\window\close-active-hovered.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\window\close-active.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\window\close-inactive.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\window\maximize-active-hovered.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\window\maximize-active.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\window\maximize-inactive.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\window\minimize-active-hovered.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\window\minimize-active.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\window\minimize-inactive.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\window\restore-active-hovered.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\window\restore-active.png" />
+    <Content Include="resources\winforms\resource\qx\decoration\Modern\window\restore-inactive.png" />
+    <Content Include="resources\winforms\resource\qx\icon\Tango\16\actions\dialog-cancel.png" />
+    <Content Include="resources\winforms\resource\qx\icon\Tango\16\actions\dialog-ok.png" />
+    <Content Include="resources\winforms\resource\qx\icon\Tango\16\actions\view-refresh.png" />
+    <Content Include="resources\winforms\resource\qx\icon\Tango\16\actions\window-close.png" />
+    <Content Include="resources\winforms\resource\qx\icon\Tango\16\apps\office-calendar.png" />
+    <Content Include="resources\winforms\resource\qx\icon\Tango\16\apps\utilities-color-chooser.png" />
+    <Content Include="resources\winforms\resource\qx\icon\Tango\16\mimetypes\office-document.png" />
+    <Content Include="resources\winforms\resource\qx\icon\Tango\16\places\folder-open.png" />
+    <Content Include="resources\winforms\resource\qx\icon\Tango\16\places\folder.png" />
+    <Content Include="resources\winforms\resource\qx\icon\Tango\22\mimetypes\office-document.png" />
+    <Content Include="resources\winforms\resource\qx\icon\Tango\22\places\folder-open.png" />
+    <Content Include="resources\winforms\resource\qx\icon\Tango\22\places\folder.png" />
+    <Content Include="resources\winforms\resource\qx\icon\Tango\32\mimetypes\office-document.png" />
+    <Content Include="resources\winforms\resource\qx\icon\Tango\32\places\folder-open.png" />
+    <Content Include="resources\winforms\resource\qx\icon\Tango\32\places\folder.png" />
+    <Content Include="resources\winforms\resource\qx\static\blank.gif" />
+    <Content Include="resources\winforms\resource\qx\static\blank.png" />
+    <Content Include="resources\winforms\script\ceftest.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="resources\CEFResource\types-gt-mp\Declarations.d.ts" />
+    <TypeScriptCompile Include="resources\CEFResource\types-gt-mp\Definitions\Declarations.d.ts" />
+    <TypeScriptCompile Include="resources\CEFResource\types-gt-mp\Definitions\GrandTheftMultiplayer.Client.Contracts.d.ts" />
+    <TypeScriptCompile Include="resources\CEFResource\types-gt-mp\Definitions\GrandTheftMultiplayer.Client.GUI.d.ts" />
+    <TypeScriptCompile Include="resources\CEFResource\types-gt-mp\Definitions\GrandTheftMultiplayer.Client.Javascript.d.ts" />
+    <TypeScriptCompile Include="resources\CEFResource\types-gt-mp\Definitions\GrandTheftMultiplayer.Client.Javascript.ScriptContext.d.ts" />
+    <TypeScriptCompile Include="resources\CEFResource\types-gt-mp\Definitions\GrandTheftMultiplayer.Client.Models.d.ts" />
+    <TypeScriptCompile Include="resources\CEFResource\types-gt-mp\Definitions\GrandTheftMultiplayer.Client.Sound.d.ts" />
+    <TypeScriptCompile Include="resources\CEFResource\types-gt-mp\Definitions\GrandTheftMultiplayer.Client.Sync.d.ts" />
+    <TypeScriptCompile Include="resources\CEFResource\types-gt-mp\Definitions\GrandTheftMultiplayer.Shared.d.ts" />
+    <TypeScriptCompile Include="resources\CEFResource\types-gt-mp\Definitions\GrandTheftMultiplayer.Shared.Math.d.ts" />
+    <TypeScriptCompile Include="resources\CEFResource\types-gt-mp\Definitions\GTA.d.ts" />
+    <TypeScriptCompile Include="resources\CEFResource\types-gt-mp\Definitions\GTA.Math.d.ts" />
+    <TypeScriptCompile Include="resources\CEFResource\types-gt-mp\Definitions\GTA.Native.d.ts" />
+    <TypeScriptCompile Include="resources\CEFResource\types-gt-mp\Definitions\GTA.NaturalMotion.d.ts" />
+    <TypeScriptCompile Include="resources\CEFResource\types-gt-mp\Definitions\GTA.UI.d.ts" />
+    <TypeScriptCompile Include="resources\CEFResource\types-gt-mp\Definitions\index.d.ts" />
+    <TypeScriptCompile Include="resources\CEFResource\types-gt-mp\Definitions\Microsoft.ClearScript.d.ts" />
+    <TypeScriptCompile Include="resources\CEFResource\types-gt-mp\Definitions\NativeUI.d.ts" />
+    <TypeScriptCompile Include="resources\CEFResource\types-gt-mp\Definitions\NativeUI.UIMenu.d.ts" />
+    <TypeScriptCompile Include="resources\CEFResource\types-gt-mp\Definitions\NativeUI.UIMenuDynamicListItem.d.ts" />
+    <TypeScriptCompile Include="resources\CEFResource\types-gt-mp\Definitions\NativeUI.UIMenuItem.d.ts" />
+    <TypeScriptCompile Include="resources\CEFResource\types-gt-mp\Definitions\NativeUI.UIResText.d.ts" />
+    <TypeScriptCompile Include="resources\CEFResource\types-gt-mp\Definitions\System.Collections.d.ts" />
+    <TypeScriptCompile Include="resources\CEFResource\types-gt-mp\Definitions\System.Collections.Generic.d.ts" />
+    <TypeScriptCompile Include="resources\CEFResource\types-gt-mp\Definitions\System.d.ts" />
+    <TypeScriptCompile Include="resources\CEFResource\types-gt-mp\Definitions\System.Drawing.d.ts" />
+    <TypeScriptCompile Include="resources\CEFResource\types-gt-mp\Definitions\System.Windows.Forms.d.ts" />
+    <TypeScriptCompile Include="resources\packages\grandtheftmultiplayer.typescript.0.1.17\content\types-gt-mp\Declarations.d.ts" />
+    <TypeScriptCompile Include="resources\packages\grandtheftmultiplayer.typescript.0.1.17\content\types-gt-mp\Definitions\Declarations.d.ts" />
+    <TypeScriptCompile Include="resources\packages\grandtheftmultiplayer.typescript.0.1.17\content\types-gt-mp\Definitions\GrandTheftMultiplayer.Client.Contracts.d.ts" />
+    <TypeScriptCompile Include="resources\packages\grandtheftmultiplayer.typescript.0.1.17\content\types-gt-mp\Definitions\GrandTheftMultiplayer.Client.GUI.d.ts" />
+    <TypeScriptCompile Include="resources\packages\grandtheftmultiplayer.typescript.0.1.17\content\types-gt-mp\Definitions\GrandTheftMultiplayer.Client.Javascript.d.ts" />
+    <TypeScriptCompile Include="resources\packages\grandtheftmultiplayer.typescript.0.1.17\content\types-gt-mp\Definitions\GrandTheftMultiplayer.Client.Javascript.ScriptContext.d.ts" />
+    <TypeScriptCompile Include="resources\packages\grandtheftmultiplayer.typescript.0.1.17\content\types-gt-mp\Definitions\GrandTheftMultiplayer.Client.Models.d.ts" />
+    <TypeScriptCompile Include="resources\packages\grandtheftmultiplayer.typescript.0.1.17\content\types-gt-mp\Definitions\GrandTheftMultiplayer.Client.Sound.d.ts" />
+    <TypeScriptCompile Include="resources\packages\grandtheftmultiplayer.typescript.0.1.17\content\types-gt-mp\Definitions\GrandTheftMultiplayer.Client.Sync.d.ts" />
+    <TypeScriptCompile Include="resources\packages\grandtheftmultiplayer.typescript.0.1.17\content\types-gt-mp\Definitions\GrandTheftMultiplayer.Shared.d.ts" />
+    <TypeScriptCompile Include="resources\packages\grandtheftmultiplayer.typescript.0.1.17\content\types-gt-mp\Definitions\GrandTheftMultiplayer.Shared.Math.d.ts" />
+    <TypeScriptCompile Include="resources\packages\grandtheftmultiplayer.typescript.0.1.17\content\types-gt-mp\Definitions\GTA.d.ts" />
+    <TypeScriptCompile Include="resources\packages\grandtheftmultiplayer.typescript.0.1.17\content\types-gt-mp\Definitions\GTA.Math.d.ts" />
+    <TypeScriptCompile Include="resources\packages\grandtheftmultiplayer.typescript.0.1.17\content\types-gt-mp\Definitions\GTA.Native.d.ts" />
+    <TypeScriptCompile Include="resources\packages\grandtheftmultiplayer.typescript.0.1.17\content\types-gt-mp\Definitions\GTA.NaturalMotion.d.ts" />
+    <TypeScriptCompile Include="resources\packages\grandtheftmultiplayer.typescript.0.1.17\content\types-gt-mp\Definitions\GTA.UI.d.ts" />
+    <TypeScriptCompile Include="resources\packages\grandtheftmultiplayer.typescript.0.1.17\content\types-gt-mp\Definitions\index.d.ts" />
+    <TypeScriptCompile Include="resources\packages\grandtheftmultiplayer.typescript.0.1.17\content\types-gt-mp\Definitions\Microsoft.ClearScript.d.ts" />
+    <TypeScriptCompile Include="resources\packages\grandtheftmultiplayer.typescript.0.1.17\content\types-gt-mp\Definitions\NativeUI.d.ts" />
+    <TypeScriptCompile Include="resources\packages\grandtheftmultiplayer.typescript.0.1.17\content\types-gt-mp\Definitions\NativeUI.UIMenu.d.ts" />
+    <TypeScriptCompile Include="resources\packages\grandtheftmultiplayer.typescript.0.1.17\content\types-gt-mp\Definitions\NativeUI.UIMenuDynamicListItem.d.ts" />
+    <TypeScriptCompile Include="resources\packages\grandtheftmultiplayer.typescript.0.1.17\content\types-gt-mp\Definitions\NativeUI.UIMenuItem.d.ts" />
+    <TypeScriptCompile Include="resources\packages\grandtheftmultiplayer.typescript.0.1.17\content\types-gt-mp\Definitions\NativeUI.UIResText.d.ts" />
+    <TypeScriptCompile Include="resources\packages\grandtheftmultiplayer.typescript.0.1.17\content\types-gt-mp\Definitions\System.Collections.d.ts" />
+    <TypeScriptCompile Include="resources\packages\grandtheftmultiplayer.typescript.0.1.17\content\types-gt-mp\Definitions\System.Collections.Generic.d.ts" />
+    <TypeScriptCompile Include="resources\packages\grandtheftmultiplayer.typescript.0.1.17\content\types-gt-mp\Definitions\System.d.ts" />
+    <TypeScriptCompile Include="resources\packages\grandtheftmultiplayer.typescript.0.1.17\content\types-gt-mp\Definitions\System.Drawing.d.ts" />
+    <TypeScriptCompile Include="resources\packages\grandtheftmultiplayer.typescript.0.1.17\content\types-gt-mp\Definitions\System.Windows.Forms.d.ts" />
+    <TypeScriptCompile Include="types-gt-mp\Declarations.d.ts" />
+    <TypeScriptCompile Include="types-gt-mp\Definitions\Declarations.d.ts" />
+    <TypeScriptCompile Include="types-gt-mp\Definitions\GrandTheftMultiplayer.Client.Contracts.d.ts" />
+    <TypeScriptCompile Include="types-gt-mp\Definitions\GrandTheftMultiplayer.Client.GUI.d.ts" />
+    <TypeScriptCompile Include="types-gt-mp\Definitions\GrandTheftMultiplayer.Client.Javascript.d.ts" />
+    <TypeScriptCompile Include="types-gt-mp\Definitions\GrandTheftMultiplayer.Client.Javascript.ScriptContext.d.ts" />
+    <TypeScriptCompile Include="types-gt-mp\Definitions\GrandTheftMultiplayer.Client.Models.d.ts" />
+    <TypeScriptCompile Include="types-gt-mp\Definitions\GrandTheftMultiplayer.Client.Sound.d.ts" />
+    <TypeScriptCompile Include="types-gt-mp\Definitions\GrandTheftMultiplayer.Client.Sync.d.ts" />
+    <TypeScriptCompile Include="types-gt-mp\Definitions\GrandTheftMultiplayer.Shared.d.ts" />
+    <TypeScriptCompile Include="types-gt-mp\Definitions\GrandTheftMultiplayer.Shared.Math.d.ts" />
+    <TypeScriptCompile Include="types-gt-mp\Definitions\GTA.d.ts" />
+    <TypeScriptCompile Include="types-gt-mp\Definitions\GTA.Math.d.ts" />
+    <TypeScriptCompile Include="types-gt-mp\Definitions\GTA.Native.d.ts" />
+    <TypeScriptCompile Include="types-gt-mp\Definitions\GTA.NaturalMotion.d.ts" />
+    <TypeScriptCompile Include="types-gt-mp\Definitions\GTA.UI.d.ts" />
+    <TypeScriptCompile Include="types-gt-mp\Definitions\index.d.ts" />
+    <TypeScriptCompile Include="types-gt-mp\Definitions\Microsoft.ClearScript.d.ts" />
+    <TypeScriptCompile Include="types-gt-mp\Definitions\NativeUI.d.ts" />
+    <TypeScriptCompile Include="types-gt-mp\Definitions\NativeUI.UIMenu.d.ts" />
+    <TypeScriptCompile Include="types-gt-mp\Definitions\NativeUI.UIMenuDynamicListItem.d.ts" />
+    <TypeScriptCompile Include="types-gt-mp\Definitions\NativeUI.UIMenuItem.d.ts" />
+    <TypeScriptCompile Include="types-gt-mp\Definitions\NativeUI.UIResText.d.ts" />
+    <TypeScriptCompile Include="types-gt-mp\Definitions\System.Collections.d.ts" />
+    <TypeScriptCompile Include="types-gt-mp\Definitions\System.Collections.Generic.d.ts" />
+    <TypeScriptCompile Include="types-gt-mp\Definitions\System.d.ts" />
+    <TypeScriptCompile Include="types-gt-mp\Definitions\System.Drawing.d.ts" />
+    <TypeScriptCompile Include="types-gt-mp\Definitions\System.Windows.Forms.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="resources\CEFResource\bin\Debug\" />
+    <Folder Include="resources\CEFResource\bin\Release\" />
+    <Folder Include="resources\CEFResource\obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
