@@ -4,6 +4,7 @@
   <!--Client Files-->
   <script src="Javascript/Eventhandler.js" type="client" lang="javascript" />
   <script src="Javascript/CEF.js" type="client" lang="javascript" />
+  <script src="Javascript/Login.js" type="client" lang="javascript" />
  
   <!--Server Files-->
   <script src="CEFCommands.cs" type="server" lang="csharp" />
@@ -11,5 +12,7 @@
 
   <!--CEF Resources-->
   <file src="Designs/blackbox.html" />
-  <file src="Designs/main.css" />
+  <file src="Designs/index.html" />
+  <file src="Designs/CSS/main.css" />
+  <file src="Designs/CSS/style.css" />
 </meta>

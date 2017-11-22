@@ -5,7 +5,11 @@
         case 'testjs':
             resource.CEF.TestHandler();
             break;
+        case 'createLoginCamera':
+            resource.Login.LoginScreen(args);
+            break;
         case 'ShowLogin': 
+            resource.Login.LoginScreen();
             break;
     }
 });

@@ -168,7 +168,9 @@
     <Content Include="resources\cefchat\meta.xml" />
     <Content Include="resources\CEFResource\CEFResource.csproj" />
     <Content Include="resources\CEFResource\Designs\blackbox.html" />
-    <Content Include="resources\CEFResource\Designs\main.css" />
+    <Content Include="resources\CEFResource\Designs\CSS\style.css" />
+    <Content Include="resources\CEFResource\Designs\index.html" />
+    <Content Include="resources\CEFResource\Designs\CSS\main.css" />
     <Content Include="resources\CEFResource\Javascript\CEF.js" />
     <Content Include="resources\CEFResource\Javascript\EventHandler.js" />
     <Content Include="resources\CEFResource\Javascript\Login.js" />
