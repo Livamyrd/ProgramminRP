@@ -22,7 +22,7 @@ function LoginScreen(args)
     API.setCanOpenChat(false);
 }
 
-function LoginClicked() {
+function LoginClicked() { 
     API.showCursor(false);
     API.setCanOpenChat(true);
     API.destroyCefBrowser(browser);
