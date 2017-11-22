@@ -8,6 +8,7 @@ using GrandTheftMultiplayer.Server.Elements;
 using GrandTheftMultiplayer.Server.Managers;
 using GrandTheftMultiplayer.Shared;
 using GrandTheftMultiplayer.Shared.Math;
+using GrandTheftMultiplayer.Server.Models;
 
 public class RaceGamemode : Script
 {

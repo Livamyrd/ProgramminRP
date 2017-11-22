@@ -12,6 +12,21 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -65,10 +80,6 @@
     <Compile Include="resources\cashgrab\heist.cs" />
     <Compile Include="resources\CEFResource\CEFCommands.cs" />
     <Compile Include="resources\CEFResource\Connect.cs" />
-    <Compile Include="resources\CEFResource\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="resources\CEFResource\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="resources\CEFResource\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
-    <Compile Include="resources\CEFResource\Properties\AssemblyInfo.cs" />
     <Compile Include="resources\colorednames\ColoredNames.cs" />
     <Compile Include="resources\copcam\copcam_trigger.cs" />
     <Compile Include="resources\copsncrooks\copsncrooks.cs" />
@@ -121,9 +132,6 @@
     <None Include="resources\assault-ranch\test.map" />
     <None Include="resources\cefchat\Roboto-Regular.ttf" />
     <None Include="resources\cefchat\Roboto-Thin.ttf" />
-    <None Include="resources\CEFResource\obj\Debug\CEFResource.csproj.CoreCompileInputs.cache" />
-    <None Include="resources\CEFResource\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <None Include="resources\CEFResource\obj\Release\CEFResource.csproj.CoreCompileInputs.cache" />
     <None Include="resources\CEFResource\packages.config" />
     <None Include="resources\dm-doom\doom.map" />
     <None Include="resources\dm-graveyard\graveyard.map" />
@@ -137,6 +145,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LICENSE.txt" />
+    <Content Include="LocalDb.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LocalDb_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>LocalDb.mdf</DependentUpon>
+    </Content>
     <Content Include="resources\admin\acl.xml" />
     <Content Include="resources\admin\meta.xml" />
     <Content Include="resources\anticheat\clientside_ac.js" />
@@ -352,6 +367,7 @@
     <Content Include="resources\winforms\resource\qx\static\blank.gif" />
     <Content Include="resources\winforms\resource\qx\static\blank.png" />
     <Content Include="resources\winforms\script\ceftest.js" />
+    <Content Include="settings.xml" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="resources\CEFResource\types-gt-mp\Declarations.d.ts" />
@@ -440,9 +456,16 @@
     <TypeScriptCompile Include="types-gt-mp\Definitions\System.Windows.Forms.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="resources\CEFResource\bin\Debug\" />
-    <Folder Include="resources\CEFResource\bin\Release\" />
-    <Folder Include="resources\CEFResource\obj\Debug\TempPE\" />
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
