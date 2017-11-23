@@ -6,6 +6,7 @@
             resource.CEF.TestHandler();
             break;
         case 'createLoginCamera':
+            API.sendChatMessage(args[0] + " " + args[1] + " " + args[2]);
             resource.Login.LoginScreen(args);
             break;
         case 'ShowLogin': 

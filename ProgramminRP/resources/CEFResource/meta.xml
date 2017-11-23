@@ -15,4 +15,9 @@
   <file src="Designs/index.html" />
   <file src="Designs/CSS/main.css" />
   <file src="Designs/CSS/style.css" />
+  
+  <!--Assemblies-->
+  <assembly ref="System.Data.dll"/>
+  <assembly ref="System.Data.DataSetExtensions.dll"/>
+  <assembly ref="System.Xml.ni.dll"/>
 </meta>

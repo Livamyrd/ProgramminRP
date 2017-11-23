@@ -1,21 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GrandTheftMultiplayer.Server.API;
+﻿using GrandTheftMultiplayer.Server.API;
 using GrandTheftMultiplayer.Server.Elements;
-using GrandTheftMultiplayer.Server.Managers;
 using GrandTheftMultiplayer.Server.Constant;
-using System.Data.SqlClient;
-using System.Data;
 using GrandTheftMultiplayer.Shared.Math;
+using System.Data;
 
 namespace CEFResource
 {
     public class Connect : Script
     {
-        SqlConnection connection;
+        System.Data.SqlClient.SqlConnection connection;
         string connectionString;
 
         private readonly Vector3 cameraPositionVinewoodSign = new Vector3(695.5733, 955.9597, 380.969);
@@ -32,19 +25,6 @@ namespace CEFResource
             
             API.setPlayerSkin(player, PedHash.FreemodeMale01);
 
-             connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB; AttachDbFilename=D:\\Fernando\\GT-MP\\ProgramminRP\\LocalDb.mdf;Integrated Security=True";
-
-            using (connection = new SqlConnection(connectionString))
-            using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM user", connection))
-            {
-                DataTable userTable = new DataTable();
-                adapter.Fill(userTable);
-
-                foreach(DataRow row in userTable.Rows)
-                {
-                    API.sendChatMessageToPlayer(player, "Your name is " + row.Field<string>("Name"));
-                }
-            }
 
         }
 
@@ -53,7 +33,23 @@ namespace CEFResource
             API.setEntityDimension(player, -1);
             API.freezePlayer(player, true);
             API.setEntityInvincible(player, true);
-            API.triggerClientEvent(player, "createLogin", cameraPositionVinewoodSign);
+
+
+            connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=F:\\GTMP\\Server\\ProgramminRP\\ProgramminRP\\LocalDb.mdf;Integrated Security=True";
+
+            using (connection = new System.Data.SqlClient.SqlConnection(connectionString))
+            using (System.Data.SqlClient.SqlDataAdapter adapter = new System.Data.SqlClient.SqlDataAdapter("SELECT * FROM [dbo].[user]", connection))
+            {
+                DataTable userTable = new DataTable();
+                adapter.Fill(userTable);
+
+                foreach (DataRow row in userTable.Rows)
+                {
+                    API.sendChatMessageToPlayer(player, "Your name is " + row.Field<string>("Name"));
+                }
+            }
+
+            API.triggerClientEvent(player, "createLoginCamera", cameraPositionVinewoodSign.X, cameraPositionVinewoodSign.Y, cameraPositionVinewoodSign.Z);
         }
 
         public void OnClientTriggered(Client player, string eventName,
@@ -62,8 +58,10 @@ namespace CEFResource
             switch (eventName)
             {
                 case "TryLogin":
+                    API.setEntityDimension(player, 0);
+                    API.freezePlayer(player, false);
                     API.sendNotificationToPlayer(player,
-                        "We're back where we started.");
+                        "Login Correcto.");
                     break;
             }
         }
